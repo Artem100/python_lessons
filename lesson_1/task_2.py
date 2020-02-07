@@ -1,6 +1,7 @@
+a = {'a': 1, 'b': 4, 't': 67}
+b = {'c': 4, 'e': 1, 'a': 4, 't': 7, 'y': 11}
 
-
-def compare_keys_2_1():
+def compare_keys_2_1(a, b):
     a = {'a': 1, 'b': 4, 't': 67}
     b = {'c': 4, 'e': 1, 'a': 4, 't': 7, 'y': 11}
     keys_a = []
@@ -13,9 +14,7 @@ def compare_keys_2_1():
     result = list(set(keys_a) & set(keys_b))
     print("Task 2,1: ", result)
 
-def compare_keys_2_2():
-    a = {'a': 1, 'b': 4, 't': 67}
-    b = {'c': 4, 'e': 1, 'a': 4, 't': 7, 'y': 11}
+def compare_keys_2_2(a, b):
     res = {}
     keys_a = []
     keys_b = []
@@ -33,14 +32,6 @@ def compare_keys_2_2():
             continue
     print("Task 2.2: ", res)
 
-    # for i in a.keys():
-    #     if i in b.keys():
-    #         continue
-    #     if i not in a.keys():
-    #         res.popitem(i)
-    #         continue
-    # print(res)
 
-
-#compare_keys_2_1()
-compare_keys_2_2()
+compare_keys_2_1(a, b)
+compare_keys_2_2(a, b)
