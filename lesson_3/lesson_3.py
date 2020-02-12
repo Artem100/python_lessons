@@ -21,8 +21,8 @@ from collections import deque
 LIST_STUDENTS = [['KRIS', 54, 56, 90], ['ANA', 66, 77, 88], ['JACK', 95, 50, 58]]
 ONE_STUD = ['KRIS', 54, 56, 90]
 sum = 0
-for int(i) in ONE_STUD:
-    if i.isdigit():
-        sum = i
-    else:
-        continue
+# for int(i) in ONE_STUD:
+#     if i.isdigit():
+#         sum = i
+#     else:
+#         continue
