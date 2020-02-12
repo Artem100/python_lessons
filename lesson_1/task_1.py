@@ -17,7 +17,7 @@ def min_and_max_value_at_list(list=[]):
 def frequently_repeated_items(list=[]):
     # counter = Counter(list)
     # print(counter.keys())
-    print("Tasks 1.2", Counter(list).most_common(3))
+    print("\nTasks 1.2", Counter(list).most_common(3))
 
 def unique_values(list=[]):
     list_set = set(list)
@@ -27,8 +27,8 @@ def unique_values(list=[]):
             continue
         else:
             new_list.append(i)
-    print("1.3.1: ", list_set)
-    print("1.3.2: ", new_list)
+    print("\nTasks 1.3.1: ", list_set)
+    print("\nTasks  1.3.2: ", new_list)
     #return new_list
 
 
