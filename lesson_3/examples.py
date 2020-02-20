@@ -1,6 +1,9 @@
-from collections import deque
+import heapq
 
-d = deque('ghi')
-d.append('j')
-d.appendleft('f')
-print(d)
+li = [5, 7, 9, 1, 3]
+heapq.heapify(li)
+heapq.heapify(li)
+print (list(li))
+#
+# heapq.nsmallest(0, li)
+# print (list(li))

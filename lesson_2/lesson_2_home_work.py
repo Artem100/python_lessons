@@ -61,8 +61,8 @@ def task_6():
     print(f"Зачада 6.\nОбщая сумма: {sum}")
 
 
-task_1 = task_1()
-task_3 = task_3()
-task_4 = task_4()
-task_5 = task_5()
+# task_1 = task_1()
+# task_3 = task_3()
+# task_4 = task_4()
+# task_5 = task_5()
 task_6 = task_6()
