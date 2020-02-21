@@ -48,36 +48,26 @@ def task_3():
     [[‘Krishna’, 67, 68, 69], [‘Arjun’, 70, 98, 63], [‘Malika’, 52, 56, 60]].
     Если на вход придет имя Malika - ответ будет 56.00."""
 
-    """
-    1. Цикл который будет создавать новый словарь
-    1.1 Если это не цифра, просто добавлять в словарь
-    1.2 Если цифра то добавлять в новую переменную и сумировать ее значение
-    1.3 В конце подсчитывать общую оценку ученика
-    2. Вывести ОТДЕЛЬНЫЙ СЛОВАРЬ КАЖДОГО УЧЕНИКА и его средний бал    
-    """
-
-
     LIST_STUDENTS = [['KRIS', 54, 56, 90], ['ANA', 66, 77, 88], ['JACK', 95, 50, 58]]
-    ONE_STUD = ['KRIS', 54, 56, 90]
-    LIST_WITH_MIDDLE_MARK = []
-    COMMON_LIST = []
+    new_list = []
     for i in LIST_STUDENTS:
-
+        dict_stud = dict()
         sum = 0
+        key = LIST_STUDENTS[0]
         for j in i:
             if type(j) is int:
                 sum = sum + j
             else:
-                LIST_WITH_MIDDLE_MARK.append(j)
-        LIST_WITH_MIDDLE_MARK.append(sum)
-
-    COMMON_LIST += LIST_WITH_MIDDLE_MARK
-    print("Общий список учени: Имя, оценка: ", COMMON_LIST)
+                key = j.split()
+            all_list = dict_stud.fromkeys(key, sum)
+        new_list.append(all_list)
+    print("Общий список учеников с оценками {Имя, оценка}: ", new_list)
 
 def task_4():
     """Сортировать список от меньшего к большему с помощью *heapq* """
+    # Не нашел как сортировать с помощью heapq
 
-
+#
 # task_1 = task_1()
-# # #task_2 = task_2()
+# task_2 = task_2()
 task_3 = task_3()
