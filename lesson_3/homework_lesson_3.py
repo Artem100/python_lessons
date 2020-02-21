@@ -7,26 +7,24 @@ from collections import deque
 
 ###Task 1
 def task_1():
-    # Без deque использовать срезы?
+    print("\nЗадание 1")
     """Есть список. Нужно реализовать операцию левый и правый сдвиг на указанный шаг.
     Нужно решение с deque и без него. Пример списка [1, 2, 3, 4, 5]  сдвиг влево на 4 для него даст [5, 1, 2, 3, 4]."""
     a = [1, 2, 3, 4, 5]
     d = deque(a)
     d.rotate(1)
-    #print("Сдвиг вправо с *deque*:", d)
+    print("Сдвиг вправо с *deque*:", d)
     d.rotate(-1)
-    #print("Сдвиг влево вернет все обратно с *deque*:", d)
+    print("Сдвиг влево вернет все обратно с *deque*:", d)
     var = a.pop()
     a.insert(0, var)
-    print(a)
+    print("Обычный сдвиг вправо: ",a)
     var_2 = a.pop(0)
     a.append(var_2)
-    print(a)
-    # a_new = a.append()[-1]
-    # print("Сдвиг вправо без deque: ", a)
+    print("Обычный сдвиг влево: ", a)
 
-###Task 2
 def task_2():
+    print("\nЗадание 2")
     """2. Дана строка S. Нужно распечатать её подстроками длиной w. Например S=”ABCDEFGHIJKLIMNOQRSTUVWXYZ” и w=4 - выход
     ABCD
     EFGH
@@ -35,12 +33,15 @@ def task_2():
     QRST
     UVWX
     YZ"""
-
-    s = string.ascii_lowercase
-    for i in range(0, len(s), 4):
-        print(s[i:i+4])
+    w = 4
+    s = string.ascii_uppercase
+    print(f"Подстроки с длиной - {w}")
+    for i in range(0, len(s), w):
+        strings = s[i:i+4]
+        print(strings)
 
 def task_3():
+    print("\nЗадание 3")
     """Дан список студентов.
     Каждая запись содержит имя студента, и его оценки по физике, математике и химии.
     Нужно сохранить данные в словарь и по вводимому имени выводить среднюю оценку по всем трем предметам.
@@ -67,7 +68,7 @@ def task_4():
     """Сортировать список от меньшего к большему с помощью *heapq* """
     # Не нашел как сортировать с помощью heapq
 
-#
-# task_1 = task_1()
-# task_2 = task_2()
+
+task_1 = task_1()
+task_2 = task_2()
 task_3 = task_3()
