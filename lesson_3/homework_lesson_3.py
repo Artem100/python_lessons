@@ -62,7 +62,7 @@ def task_3():
                 key = j.split()
             all_list = dict_stud.fromkeys(key, sum)
         new_list.append(all_list)
-    print("Общий список учеников с оценками {Имя, оценка}: ", new_list)
+    print("Общий список учеников с средняя оценка {Имя, средний_бал}: ", new_list)
 
 def task_4():
     """Сортировать список от меньшего к большему с помощью *heapq* """
