@@ -41,6 +41,7 @@ def task_5():
     length_of_password = input("Задача 5.\nВведите желаемую лину пароля: ")
     string_of_symbols = string.ascii_letters+string.digits
     new_password = []
+
     if length_of_password != '0' and length_of_password.isdigit():
         for i in range(int(length_of_password)):
             new_password.append(choice(string_of_symbols))
@@ -64,5 +65,5 @@ def task_6():
 # task_1 = task_1()
 # task_3 = task_3()
 # task_4 = task_4()
-# task_5 = task_5()
-task_6 = task_6()
+task_5 = task_5()
+# task_6 = task_6()

@@ -33,11 +33,11 @@ def task_2():
     QRST
     UVWX
     YZ"""
-    w = 4
+    w = 5
     s = string.ascii_uppercase
     print(f"Подстроки с длиной - {w}")
     for i in range(0, len(s), w):
-        strings = s[i:i+4]
+        strings = s[i:i+w]
         print(strings)
 
 def task_3():
@@ -60,7 +60,7 @@ def task_3():
                 sum = sum + j
             else:
                 key = j.split()
-            all_list = dict_stud.fromkeys(key, sum)
+            all_list = dict_stud.fromkeys(key, int(sum/3))
         new_list.append(all_list)
     print("Общий список учеников с средняя оценка {Имя, средний_бал}: ", new_list)
 
