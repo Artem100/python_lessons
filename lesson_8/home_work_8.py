@@ -8,17 +8,15 @@ from time import strftime
 
 from urllib3.util import current_time
 
-z = zipfile.ZipFile('lesson6.zip')
-# file_name = "files_"+strftime("%I_%M%p")
-# os.mkdir(file_name)
-# count_files = len(os.listdir(file_name))
-
-    for i in itertools.combinations_with_replacement(string.ascii_lowercase, 3):
-        try:
-            print(z.namelist())
-            #print(''.join(i))
-            #z.extractall(file_name, pwd=''.join(i).encode('cp850', 'replace'))
-        except:
-            continue
-    break
+z = zipfile.ZipFile('lesson6.zip', 'r')
+file_name = "files_"+strftime("%I_%M%p")
+err = None
+for i in itertools.product(string.ascii_lowercase, repeat=3):
+    try:
+        print(''.join(i))
+        z.extractall(file_name, pwd=''.join(i).encode('cp850', 'replace'))
+        break
+    except RuntimeError as e:
+        err = e
+        continue
 z.close()
