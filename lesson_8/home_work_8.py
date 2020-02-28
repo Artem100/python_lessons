@@ -16,7 +16,12 @@ for i in itertools.product(string.ascii_lowercase, repeat=3):
         print(''.join(i))
         z.extractall(file_name, pwd=''.join(i).encode('cp850', 'replace'))
         break
-    except RuntimeError as e:
-        err = e
+    except:
+        #err = e
         continue
 z.close()
+
+"""
+    1. Парсер чтобы создать по уникальному городу -> Внутри текстовый файл -> Внутри укникальные запросы (ключ слова) 
+        - указать кол. уникальных юзеров  
+"""
