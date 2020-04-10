@@ -13,12 +13,10 @@ def task_1():
 def task_3():
     """На ввод подается строка. Нужно узнать является ли строка палиндромом."""
     any_string = input("Задача 3.\nВведите любое слово: ")
-    length = len(any_string)
-    for i in range(length//2):
-        if any_string[i] != any_string[-1-i]:
-            print("\nIt's not palindrome")
-        else:
-            print("\nIt's palindrome")
+    if any_string[::-1] == any_string:
+        print("It's palindrom")
+    else:
+        print("It's not palindrom")
 
 
 def task_4():
@@ -63,7 +61,7 @@ def task_6():
 
 
 # task_1 = task_1()
-# task_3 = task_3()
+task_3 = task_3()
 # task_4 = task_4()
-task_5 = task_5()
+# task_5 = task_5()
 # task_6 = task_6()
