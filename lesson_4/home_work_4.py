@@ -1,28 +1,7 @@
-autos = [
-
-   {"brand": "Ford", "model": "Mustang", "year": 1964, 'price': 4000},
-
-   {"brand": "Ford", "model": "Mondeo", "year": 1999, 'price': 3000},
-
-   {"brand": "Ford", "model": "Fiesta", "year": 2003, 'price': 4200},
-
-   {"brand": "Nissan", "model": "Primera", "year": 1997, 'price': 3100},
-
-   {"brand": "BMW", "model": "X3", "year": 2001, 'price': 5000},
-
-   {"brand": "Nissan", "model": None, "year": 1964, 'price': None},
-
-   {"brand": "VW", "model": "Passat", "year": 1996, 'price': 1200},
-
-   {"brand": "BMW", "model": "X5", "year": 2010, 'price': 7500},
-
-   {"brand": "Renault", "model": "Megane", "year": 1999, 'price': 2300},
-
-]
 
 
 first_task_list = [1, 2, 3, 4, 5, 6]
-password = input("*Задание 3*\nВведите пароль, который содержит больше 4-х символов, содержит только маленькие латинские число букв должно быть нечетным, а цифр четным: ")
+# password = input("*Задание 3*\nВведите пароль, который содержит больше 4-х символов, содержит только маленькие латинские число букв должно быть нечетным, а цифр четным: ")
 
 
 def task_1(target_list, item_index1, item_index2):
@@ -93,18 +72,39 @@ def task_3(password):
          password = input("Пароль содержит меньше 4-х символов, попробуй еще раз: ")
 
 
-# def task_4(autos):
-"""Функция считывает значение прайс
-сравнивает его с текущим уже записанным значением
- - если больше, то записывает его в словарь как большее и отправляет весь товар наверх
- - если меньше то пусть продолжает
-"""
+def task_4():
+   """Функция считывает значение прайс
+   сравнивает его с текущим уже записанным значением
+    - если больше, то записывает его в словарь как большее и отправляет весь товар наверх
+    - если меньше то пусть продолжает
+   """
+   autos = [
 
+      {"brand": "Ford", "model": "Mustang", "year": 1964, 'price': 4000},
 
+      {"brand": "Ford", "model": "Mondeo", "year": 1999, 'price': 3000},
 
+      {"brand": "Ford", "model": "Fiesta", "year": 2003, 'price': 4200},
+
+      {"brand": "Nissan", "model": "Primera", "year": 1997, 'price': 3100},
+
+      {"brand": "BMW", "model": "X3", "year": 2001, 'price': 5000},
+
+      {"brand": "Nissan", "model": None, "year": 1964, 'price': None},
+
+      {"brand": "VW", "model": "Passat", "year": 1996, 'price': 1200},
+
+      {"brand": "BMW", "model": "X5", "year": 2010, 'price': 7500},
+
+      {"brand": "Renault", "model": "Megane", "year": 1999, 'price': 2300},
+
+   ]
+   return print(sorted(autos, key=lambda x: x['price'], reverse=True))
+   # Как быть с None
 
 
 if __name__ == '__main__':
    # task_1(first_task_list, 0, 5)
-   task_3(password)
+   # task_3(password)g
+   task_4()
 
