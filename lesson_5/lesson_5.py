@@ -26,7 +26,7 @@ def task_1():
     print(f"Максимальная последовательность {i_max}")
 
     print(count)
-    print(result)
+    print("asdasd: ", result)
 
 if __name__ == '__main__':
     task_1()
