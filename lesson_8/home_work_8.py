@@ -8,6 +8,32 @@ from time import strftime
 
 from urllib3.util import current_time
 
+"""
+3. Распаковать (в итоге получится группа папок с файлами логов в таком формате)
+
+
+ “device\tage\tsex\tcity\tuser_id\tsearch_keyword\tdomain\turl\ttype”
+
+
+4. Создать папку и в ней для каждого города который встретится в логах, создать файл (вида “new_jersey.tsv”) в котором вывести все поисковые запросы и количество уникальных user_id с которыми они встречались (через \t)
+
+  
+
+alabama.tsv
+
+   facebook\t23
+
+   youtube\t13
+
+   facebook login\t6
+
+   ebay\t6
+
+"""
+
+
+
+
 z = zipfile.ZipFile('lesson6.zip', 'r')
 file_name = "files_"+strftime("%I_%M%p")
 err = None
